@@ -1,0 +1,169 @@
+@import './App.scss';
+
+.Card{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 700px;
+    border-radius: 8px;
+    overflow: hidden;
+
+    &__col-1-2{
+        grid-column: 1 / span 2;
+        background-color: #fff;
+        padding: 3.5rem;
+
+        & h3{
+            color: var(--cyan);
+            margin-bottom: 2rem;
+            font-size: 2.6rem;
+        }
+
+        & h4{
+            color: var(--bright-yellow);
+            margin-bottom: 1rem;
+            font-size: 1.9rem;
+        }
+
+        & p{
+            color: var(--grayish-blue);
+            line-height: 1.5;
+        }
+    }
+
+    &__col-2{
+        padding: 3.8rem;
+        background-color: hsl(179, 62%, 43%);
+
+        &__heading{
+            color: #fff;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        &__sub{
+            color: #fff;
+            font-weight: 700;
+            font-size: 3.4rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 8px;
+
+            & span{
+                font-size: 1.65rem;
+                font-weight: 400;
+                color: #eee;
+            }
+        }
+
+        &__sub2{
+            color: #fff;
+            font-size: 1.65rem;
+            margin-bottom: 2.5rem;
+        }
+
+        & button{
+            font-family: inherit;
+            font-weight: 700;
+            width: 100%;
+            border: none;
+            padding: 1.5rem 0;
+            border-radius: 5px;
+            color: #fff;
+            background-color: var(--bright-yellow);
+            font-size: 1.5rem;
+            box-shadow: 0 8px 10px 0 hsla(179, 62%, 23%, 0.5);
+            cursor: pointer;
+        }
+    }
+
+    &__col-3{
+        padding: 3.8rem;
+        background-color: hsl(179, 62%, 53%);
+
+        &__heading{
+            color: #eee;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        & ul{
+            list-style: none;
+
+            & li{
+                color: #eee;
+                font-size: 1.4rem;
+
+                &:not(:last-child){
+                    margin-bottom: 4px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 375px){
+    .Card{
+        grid-template-columns: 1fr;
+        width: 86%;
+
+        &__col-1-2{
+            grid-column: 1;
+            padding: 3rem 2rem;
+
+            & h3{
+                font-size: 2rem;
+            }
+    
+            & h4{
+                font-size: 1.5rem;
+            }
+    
+            & p{
+                font-size: 1.3rem; 
+                line-height: 1.8;               
+            }
+        }
+
+        &__col-2{  
+            padding: 2rem;
+            
+            &__heading{
+                font-size: 1.7rem;
+            }
+    
+            &__sub{
+                font-size: 3.2rem;
+                gap: 11px;
+    
+                & span{
+                    font-size: 1.5rem;
+                }
+            }
+    
+            &__sub2{
+                font-size: 1.5rem;
+            }
+    
+            & button{
+                
+            }
+        }
+
+        &__col-3{
+            padding: 2rem;
+    
+            &__heading{
+                font-size: 1.7rem;
+            }
+    
+            & ul{    
+                & li{
+                    font-size: 1.3rem;
+                }
+            }
+        }
+        
+    }
+}
+
